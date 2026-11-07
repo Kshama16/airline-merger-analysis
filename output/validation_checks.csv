@@ -1,0 +1,12 @@
+Check,Result,Detail
+No duplicate route-quarters,PASS,"178,704 rows"
+Balanced panel (every route in every quarter),PASS,"4,006 routes x 24 quarters"
+Treated and control groups are disjoint,PASS,86 vs 1272 routes
+No missing or non-positive fares,PASS,all fares > 0
+TWFE estimate equals 2x2 difference-in-differences of means,PASS,0.008398 vs 0.008398
+Within estimator matches brute-force dummy-variable OLS (100-route subsample),PASS,0.00026385 vs 0.00026385
+Residuals match between within and dummy-variable OLS,PASS,max diff 4.9e-14
+Clustered standard error matches dummy-variable computation,PASS,0.030081 vs 0.030081
+Merging carrier US disappears from data after integration,PASS,US Airways code absent from 2015Q3 on
+Event-study pre-merger effects average to zero,PASS,re-centered on pre-period mean
+"Matched controls are balanced on distance, traffic and fare (within 10%)",PASS,"miles -4.7%, pax -0.2%, fare -2.8%"
